@@ -1,20 +1,19 @@
-import java.util.Scanner;
-
-public class CountDigits {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+public class Sample
+{
+	public static void main(String[]args)
+	{
+	    Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter a number: ");
         int num = scanner.nextInt();
 
-        int count = 0;
-        
+        int sum = 0;
+
         while (num != 0) {
-            num = num / 10;
-            count++;
+            sum += num % 10;
+            num /= 10;
         }
 
-        System.out.println("The number of digits is: " + count);
+        System.out.println("Sum of digits: " + sum);
     }
 }
-
